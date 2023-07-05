@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek/models/home.dart';
 
 class BottomPage extends StatefulWidget {
   @override
@@ -7,6 +8,24 @@ class BottomPage extends StatefulWidget {
 
 class _BottomPageState extends State<BottomPage> {
   int _selectedIndex = 0;
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+
+  static List<Widget> _widgetOption = <Widget>[
+    HomePage(),
+    Text(
+      "Page2",
+      style: optionStyle,
+    ),
+    Text(
+      "Page3",
+      style: optionStyle,
+    ),
+    Text(
+      "Page4",
+      style: optionStyle,
+    ),
+  ];
 
   void _onItemTapped(int index) {
     setState(() {
