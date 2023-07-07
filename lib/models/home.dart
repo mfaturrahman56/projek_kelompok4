@@ -29,8 +29,8 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-}
-Widget buildSingleItem({
+
+  Widget buildSingleItem({
     images,
     title,
     subTitle,
