@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  static var screenHeight;
-  static var screenWidth;
+  
 
   Widget buildElektronikCategory({categoryName, isSelected}) {
     return Padding(
@@ -38,6 +37,8 @@ Widget buildSingleItem({
     context,
     rating,
   }) {
+    var screenWidth;
+    var screenHeight;
     return GestureDetector(
       onTap: () {
       },
