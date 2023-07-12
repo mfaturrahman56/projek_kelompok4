@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:projek/models/home.dart';
+import 'package:flutter/material.dart';
 
 class BottomPage extends StatefulWidget {
   @override
@@ -8,6 +8,7 @@ class BottomPage extends StatefulWidget {
 
 class _BottomPageState extends State<BottomPage> {
   int _selectedIndex = 0;
+
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
@@ -38,7 +39,7 @@ class _BottomPageState extends State<BottomPage> {
     return Scaffold(
       backgroundColor: Color(0xff0c0f14),
       body: Center(
-       
+        child: _widgetOption.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: SizedBox(
         height: 70,

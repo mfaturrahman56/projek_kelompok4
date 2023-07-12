@@ -270,3 +270,226 @@ class HomePage extends StatelessWidget {
                       )),
                 ),
               ),
+              SingleChildScrollView(
+                physics: BouncingScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    buildElektronikCategory(
+                      categoryName: "Headphone",
+                      isSelected: true,
+                    ),
+                    buildElektronikCategory(
+                      categoryName: "laptop",
+                      isSelected: false,
+                    ),
+                    buildElektronikCategory(
+                      categoryName: "Headset",
+                      isSelected: false,
+                    ),
+                    buildElektronikCategory(
+                      categoryName: "Printer",
+                      isSelected: false,
+                    ),
+                    buildElektronikCategory(
+                      categoryName: "Aksesoris",
+                      isSelected: false,
+                    ),
+                  ],
+                ),
+              ),
+              SingleChildScrollView(
+                physics: BouncingScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    buildSingleItem(
+                      context: context,
+                      images: "assets/images/hp1.jpg",
+                      title: "Headphone",
+                      subTitle: "abc",
+                      price: 4.20,
+                      rating: 4.5,
+                    ),
+                    buildSingleItem(
+                      context: context,
+                      images: "assets/images/leptop1.jpg",
+                      title: "laptop",
+                      subTitle: "abc",
+                      price: 3.14,
+                      rating: 4.5,
+                    ),
+                    buildSingleItem(
+                      context: context,
+                      images: "assets/images/hengset1.jpg",
+                      title: "Headset",
+                      subTitle: "abc",
+                      price: 3.14,
+                      rating: 4.5,
+                    ),
+                    buildSingleItem(
+                      images: "assets/images/printer1.png",
+                      title: "Printer",
+                      subTitle: "abc",
+                      price: 3.14,
+                      rating: 4.5,
+                    ),
+                    buildSingleItem(
+                      context: context,
+                      images: "assets/images/Aksesoris1.png",
+                      title: "Aksesoris",
+                      subTitle: "abc",
+                      price: 3.14,
+                      rating: 4.5,
+                    ),
+                    
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 5),
+                child: ListTile(
+                  leading: Text(
+                    "Special for you",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ),
+              ),
+              Stack(
+                alignment: Alignment.topRight,
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(12.0),
+                    margin: EdgeInsets.symmetric(horizontal: 15),
+                    height: screenHeight * 0.2 - 20,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color(0xff171b22),
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 2.0,
+                                  spreadRadius: 1.0,
+                                  color: Color(0xff30221f),
+                                ),
+                              ],
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage(
+                                  "assets/images/Aksesoris1.png",
+                                ),
+                              ),
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20.0,
+                        ),
+                        Expanded(
+                          flex: 2,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Aksesoris",
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                              Text(
+                                "elektronik",
+                                style: TextStyle(
+                                  color: Color(0xffaeaeae),
+                                ),
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "\$\t",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: Color(0xffd17842),
+                                        ),
+                                      ),
+                                      Text(
+                                        "4.20",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Color(0xffd17842),
+                                      borderRadius: BorderRadius.circular(10.0),
+                                    ),
+                                    child: Icon(Icons.add,
+                                        size: 30, color: Colors.white),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 15),
+                    height: 25.0,
+                    width: 50.0,
+                    decoration: BoxDecoration(
+                      color: Color(0xff231715),
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(20.0),
+                        bottomLeft: Radius.circular(20.0),
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Icon(
+                          Icons.star,
+                          size: 15,
+                          color: Color(0xffd17842),
+                        ),
+                        Text(
+                          "4.5",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
